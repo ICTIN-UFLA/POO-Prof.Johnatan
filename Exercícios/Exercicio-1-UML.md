@@ -1,5 +1,8 @@
+## Lista Diagrama de Classes 
 
-### Lista de Exercícios 1
+#### 1) Em relação aos relacionamentos abaixo, responda: 
+a) Qual a representação mais correta, a primeira ou a segunda relação? Por quê? 
 
-#### 1) Sistema de Cadastro de Alunos
-Crie uma classe chamada **Aluno** que represente um aluno com os seguintes atributos: nome, matrícula e notas em três disciplinas. Em seguida, crie uma classe SistemaCadastroAlunos (classe **App**) que permita cadastrar alunos, calcular a média das notas e exibir as informações de um aluno específico. O seu sistema deve permitir o cadastro de 3 alunos. 
+b) O que é preciso mudar na segunda relação para representar que uma casa possui diversos proprietários ao longo do tempo? 
+
+![Diagrama de Classe](https://raw.githubusercontent.com/ICTIN-UFLA/POO-Johnatan-2024-1/main/img/class1.png)
