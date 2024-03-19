@@ -36,6 +36,22 @@ representa a estrutrua estática
 
 ## Lista Diagrama de Classes 
 
+#### Exercício 0 Identificação de Classes em um "Mini Mundo"
+Descrição do Mini Mundo:
+
+Imagine uma pequena loja de departamentos. Nesta loja, há vários produtos à venda, incluindo roupas, eletrônicos, e utensílios domésticos. Cada produto tem um preço, uma categoria e está disponível em uma quantidade específica no estoque. Os clientes podem visitar a loja, escolher produtos e comprá-los. Para cada compra, é emitido um recibo que lista os itens comprados, a quantidade de cada item, o preço total e a data da compra.
+
+Os funcionários da loja são responsáveis por gerenciar o estoque, atender os clientes e processar as vendas. Cada funcionário tem um nome, um ID único, uma função específica (como caixa, gerente ou assistente de vendas) e um salário.
+
+**Instruções:**
+*Identifique as Classes:* Leia a descrição do mini mundo acima e identifique todas as classes potenciais que podem ser modeladas em um software para esse cenário.
+
+*Defina Atributos e Métodos:* Para cada classe identificada, liste os atributos e métodos relevantes. Por exemplo, para a classe Produto, os atributos podem incluir preco, categoria, e quantidadeEmEstoque, enquanto os métodos podem incluir adicionarEstoque() e removerEstoque().
+
+*Relações entre Classes:* Pense sobre como essas classes podem estar relacionadas. Por exemplo, um Recibo está relacionado a um Cliente e a vários Produtos.
+
+*Desenvolva um Diagrama de Classes:* Utilize uma ferramenta de diagramação (ex: ArgoUML ou draw.io )para criar um diagrama de classes UML representando as classes, seus atributos, métodos e as relações entre elas.
+
 #### 1) Em relação aos relacionamentos abaixo, responda: 
 a) Qual a representação mais correta, a primeira ou a segunda relação? Por quê? 
 
