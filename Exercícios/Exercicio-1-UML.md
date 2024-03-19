@@ -14,3 +14,7 @@ b) O que é preciso mudar na segunda relação para representar que uma casa pos
 
 #### 3) Qual a diferença de interpretação entre os relacionamentos livro-sobrecapa e livro-páginas ? 
 ![Diagrama de Classe](https://raw.githubusercontent.com/ICTIN-UFLA/POO-Johnatan-2024-1/main/img/class3.png)
+
+
+#### 4) Todo aluno matriculado em trabalho de diplomação  será orientado por um professor. Alguns professores orientam vários alunos e outros, nenhum. Qual dos diagramas melhor representa esta relação ? 
+![Diagrama de Classe](https://raw.githubusercontent.com/ICTIN-UFLA/POO-Johnatan-2024-1/main/img/class4.png)
