@@ -1,3 +1,4 @@
+
 # Revisão P1
  
 ## Exercício 1
@@ -77,3 +78,102 @@ E. FOR
  B) Polimorfismo. 
  C) Encapsulamento. 
  D) Abstração.
+
+5. Por que programação orientada a objetos tem esse nome? O que são objetos nesse contexto?
+6.  A análise e o projeto orientados a objetos têm como meta identificar o melhor conjunto de objetos para descrever um sistema de software. O funcionamento desse sistema se dá por meio do relacionamento e troca de mensagens entre esses objetos. Na programação orientada a objetos, implementa-se um conjunto de classes que definem os objetos presentes no sistema de software. Com relação à herança múltipla é correto afirmar
+
+(ANO: 2009 BANCA: TJPR ÓRGÃO: TJ-PR PROVA: INFORMÁTICA - ANALISTA DE SISTEMAS):
+
+
+a)  O usuário não necessita conhecer detalhes do funcionamento interno do sistema para poder utilizá-lo
+b)   É o princípio pelo qual duas ou mais classes derivadas de uma mesma superclasse podem invocar métodos que têm a mesma identificação mas comportamentos distintos
+c) As mensagens enviadas a um  objeto podem mudar o valor de um ou mais atributos
+d) Possibilita que uma   classe herde atributos e métodos de duas ou mais classes
+
+7.  Controlar a complexidade pela ênfase em características essenciais e pela supressão de detalhes em orientação a objetos é denominado(a)
+a. abstração
+b. herança  
+c.  analogia
+d. visibilidade
+
+8. Na orientação a objetos, o conceito que garante que nenhum acesso direto é concedido aos dados é atribuído por meio do(a)
+a  polimorfismo.
+b.  herança.
+c.  agregação.
+d.  abstração.  
+e.  encapsulamento.
+
+9.  Na orientação a objetos, a sobrecarga é utilizada por meio do conceito de:
+a.  encapsulamento.  
+b.  herança.
+c.  agregação.  
+d.  polimorfismo.  
+e.  abstração. 
+
+10.  O trecho de código mostrado abaixo é um exemplo de encapsulamento.
+```java
+public class Animal
+{
+    public String nome;
+    public String tipo;
+    public String cor;
+
+    public String getNome(){ return nome; }
+    public void setNome(String nome){ this.nome = nome; }
+    public String getTipo(){ return tipo; }
+    public void setTipo(String tipo){ this.tipo = tipo; }
+    public String getCor(){ return cor; }
+    public void setCor(String cor){ this.cor = cor; }
+}
+```
+
+C) Certo  
+E) Errado
+
+11. No contexto de programação orientada a objetos, considere as afirmativas abaixo.
+
+(FCC - 2012 - TJ-RJ - Analista Judiciário - Análise de Sistemas)
+
+1.  Objetos são instâncias de classes.
+2.  Herança é uma relação entre objetos
+3.  Mensagens são formas de executar métodos.
+4.  Classes são apenas agrupamentos de métodos.
+5.  Ocorre herança múltipla quando mais de um  método é herdado.
+6.  Herança é uma relação entre classes.
+    
+Está correto o que se afirma APENAS em
+
+1.  I, III e IV.
+2.  I, III e VI.
+3.  III, IV e VI.
+4.  II, III e V.
+5.  II, IV e V.
+
+
+12 . QUESTÃO ERRADA. IDENTIFIQUE O PORQUÊ: Na orientação a objetos, em uma relação de herança entre classes, a subclasse herda da superclasse
+
+(FCC - 2012 - TRE-SP - Técnico Judiciário - Programação de Sistemas)
+
+1.  apenas as variáveis públicas de  instância
+2.  apenas os métodos e variáveis de  instância públicos.
+3.  todas as variáveis de  instância e apenas os métodos estáticos.
+4.  todas as variáveis e métodos, exceto os públicos e os que foram sobrescritos.
+5.  todas as variáveis de  instância e os métodos, entretanto, podem explicitamente sobrescrever alguns destes componentes.
+
+
+
+13.Sejam A e B duas classes em um programa orientado a objetos. Se A é  de B, então objetos da classe A  ___  atributos que objetos da classe B.
+
+(FEPESE - 2010 - UDESC - Analista de Sistemas)
+
+Assinale a alternativa que completa correta e sequencialmente as lacunas do texto.
+
+1.  subclasse ; podem possuir mais
+    
+2.  subclasse ; não podem possuir mais
+    
+3.  superclasse ; possuem necessariamente mais
+    
+4.  superclasse ; possuem necessariamente menos
+    
+5.  subclasse ; possuem necessariamente menos
