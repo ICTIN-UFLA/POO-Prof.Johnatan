@@ -177,3 +177,38 @@ Assinale a alternativa que completa correta e sequencialmente as lacunas do text
 4.  superclasse ; possuem necessariamente menos
     
 5.  subclasse ; possuem necessariamente menos
+
+14.Dada a classe abaixo:
+    
+
+ ```java 
+public class Blue{
+static int color;
+public static String NAME = "Blue";
+public Blue(int hue) { ... }
+public int getHue() {return hue;}
+public void setHue(int hue) { ... }
+public void makeItDarker() { ... }
+void calculateHue() { ... }
+private void makeHueDarker(int value) { ... }
+}
+```
+
+Responda:
+
+1.  Quais são as variáveis de classe?
+    
+2.  Quais são os construtores?
+    
+3.  Quais métodos fazem parte da interface dessa classe?
+    
+4.  Quais métodos e variáveis devem ser documentados com JavaDoc?
+    
+5.  Sem mudar o código que está escrito. Implemente o método setHue e a variável que ele necessita.
+    
+6.  Sem mudar o código que está escrito. Implemente o construtor.
+    
+7.  O código abaixo roda? Justifique.
+    ``` java
+    var color = new Blue();
+    ```
