@@ -224,11 +224,3 @@ Neste exercício, você irá desenvolver um sistema simples de gerenciamento de 
 5. **Classe `Main`:**
     - Fornece uma interface de texto simples para adicionar livros e emprestar livros a usuários, com tratamento de exceções.
 
-
-2. Execute o programa:
-
-    ```sh
-    java Main
-    ```
-
-Insira diferentes valores para testar os diferentes casos de exceções tratadas pelo programa.
