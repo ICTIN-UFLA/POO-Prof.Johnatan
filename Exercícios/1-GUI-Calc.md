@@ -399,5 +399,9 @@ Você deve ver uma janela com uma interface de calculadora simples onde você po
 
 - **actionPerformed:** Um método de `ActionListener` que é chamado sempre que uma ação é realizada.
 
+
+# Prática com NetBeans 
+https://edirlei.com/aulas/tp2_2014_2/TP2_Aula_03_GUI_e_Swing_2014.html
+
   
 
