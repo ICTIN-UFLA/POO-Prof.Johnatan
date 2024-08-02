@@ -261,7 +261,9 @@ return  "Nome: " + nome + ", Telefone: " + telefone + ", CPF: " + cpf;
 ```java
 
 
-private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) { // Capturar o nome para busca String nomeBusca = txtBuscaNome.getText(); 
+private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {
+// Capturar o nome para busca
+String nomeBusca = txtBuscaNome.getText(); 
 StringBuilder resultado = new StringBuilder(); // Procurar a pessoa na lista 
 for (Pessoa pessoa : listaPessoas) { 
 	if (pessoa.getNome().equalsIgnoreCase(nomeBusca)) {
