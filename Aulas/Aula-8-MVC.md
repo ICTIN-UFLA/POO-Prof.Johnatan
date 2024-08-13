@@ -371,7 +371,7 @@ controller.updateView();
   
 
 ## 5. Atividade Prática
-
+Para essa atividade, sugiro o Neatbeans
   
 
 ### Implementação de uma Aplicação de Cadastro de Produtos
