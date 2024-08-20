@@ -1,4 +1,3 @@
-
 # POO: Revisão para a Prova II
 
 ## Questões Discursivas
@@ -35,4 +34,44 @@
 29. Em um código legado, você encontra comentários excessivos explicando o que cada bloco de código faz. Qual code smell isso pode indicar? Como você refatoraria o código para reduzir a necessidade de comentários extensivos?
 30. Em um sistema orientado a objetos, você percebe que uma classe base (superclasse) está sendo estendida por várias subclasses, mas muitas das subclasses não utilizam todos os métodos e atributos herdados. Como você abordaria a refatoração dessa hierarquia de classes? Quais são os riscos de uma abordagem de "Refused Bequest" e como mitigá-los?
 31. Discorra sobre a importância de testes automatizados durante o processo de refatoração. Como os testes podem ajudar a garantir que a refatoração não introduza novos bugs? Qual seria sua abordagem para manter a cobertura de testes adequada enquanto refatora um sistema?
+32. Defina o que é uma exceção em Java e como ela difere de um erro. Dê exemplos de exceções e erros em um programa Java.
+33. Qual é a diferença entre exceções checadas e não checadas? Cite exemplos de cada tipo e explique como o Java lida com elas durante a compilação e execução.
+34. A hierarquia de exceções em Java começa com a classe `Throwable`. Explique a diferença entre as subclasses `Exception` e `Error`. Por que `Error` não deve ser tratado pelo programador?
+35. Considere as classes `Exception` e `RuntimeException`. Como elas se relacionam e por que é importante entender essa relação ao desenvolver aplicações robustas em Java?
+36. Suponha que você esteja implementando uma calculadora que não permite divisão por zero. Escreva uma classe de exceção personalizada chamada `ImpossivelDividirPorZeroException` e modifique o método `dividir` para lançar essa exceção quando o divisor for zero.
+37. Explique o processo de lançar uma exceção em Java. Qual é a importância da cláusula `throws` em um método que pode gerar exceções?
+38. Descreva como os blocos `try`, `catch`, e `finally` são usados para tratar exceções em Java. O que acontece se uma exceção for lançada em um bloco `try`, mas não houver um bloco `catch` correspondente?
+39. O que acontece quando um bloco `finally` está presente após um bloco `try-catch`? Explique um cenário onde o uso de `finally` é essencial.
+40. Em algumas situações, pode ser preferível não capturar uma exceção imediatamente, mas repassá-la para outro método ou nível superior. Como isso pode ser feito em Java? Dê um exemplo e explique em que situações essa abordagem é vantajosa.
+41. Quando devemos criar nossas próprias classes de exceção? Escreva um exemplo de uma exceção personalizada para lidar com um cenário específico, como uma `InvalidDateException`.
+42. Quais são as principais vantagens do uso de exceções em comparação ao uso de códigos de erro tradicionais? Discuta como o uso de exceções pode melhorar a legibilidade e manutenção do código.
+43. Discorra sobre como as exceções permitem o agrupamento e a diferenciação dos tipos de erros. Por que é importante ter blocos `catch` específicos para diferentes tipos de exceções?
+44. Durante a captura de exceções, é possível capturar tipos específicos e um tipo genérico de exceção. O que devemos considerar ao decidir a ordem dos blocos `catch`? Explique os riscos de capturar exceções genéricas antes de exceções específicas.
+45. A complexidade ciclomática é uma métrica importante para avaliar a complexidade de um programa. Considere um grafo de fluxo de controle simples com 10 arestas (E) e 8 nós (N). Calcule a complexidade ciclomática usando a fórmula V(G)=E−N+2V(G) = E - N + 2V(G)=E−N+2.  
+46.  Explique o significado da complexidade ciclomática e como ela pode influenciar o processo de manutenção de um software.
+47. Em que tipo de situações você recomendaria a utilização da complexidade ciclomática como métrica principal para avaliar a qualidade do código?
+48. A métrica WMC (Weighted Methods per Class) conta o número de métodos em uma classe e pode ser ponderada de acordo com critérios como linhas de código, complexidade ciclomática, ou número de parâmetros. a) Qual seria o impacto de um valor elevado de WMC em uma classe? b)  Se uma classe possui 5 métodos com a seguinte distribuição de complexidade ciclomática: 1, 3, 2, 4, 1, qual seria o valor de WMC se usarmos a complexidade ciclomática como peso?  c)  Discuta as possíveis consequências de ter uma classe com um valor de WMC muito alto em termos de manutenibilidade e refatoração do código.
+49. A profundidade da árvore de herança (DIT) é outra métrica essencial em POO, que mede o número de níveis em uma árvore de herança. a) Explique por que um valor alto de DIT pode ser um indicativo de um projeto complexo e difícil de entender.  
+b) Considere dois cenários: (a) Uma classe com DIT = 1 e  uma classe com DIT = 4. Quais seriam os possíveis desafios de manutenção em cada cenário?  c) Sob quais circunstâncias um valor alto de DIT poderia ser considerado vantajoso?
+50. O acoplamento entre classes é medido pela métrica CBO (Coupling Between Objects). a) Explique por que o acoplamento é um fator crítico na manutenção e evolução de software orientado a objetos.  b) Imagine uma classe que interage diretamente com 8 outras classes. Como isso refletiria no valor do CBO? Quais problemas podem surgir se esse valor for muito elevado?  c)  Sugira estratégias para reduzir o acoplamento em um sistema orientado a objetos sem comprometer sua funcionalidade.
+51. A métrica LCOM (Lack of Cohesion of Methods) mede a falta de coesão entre os métodos de uma classe. a) Uma classe tem 4 métodos, onde:
+
+-   Método A acessa atributos X e Y
+-   Método B acessa atributos X e Z
+-   Método C acessa apenas o atributo Y
+-   Método D não acessa nenhum atributo
+
+Calcule a métrica LCOM para esta classe.  
+b) Discuta a importância da coesão em uma classe e como um alto valor de LCOM pode afetar a modularidade do sistema.  
+c) Dê exemplos de refatorações que poderiam ser feitas para melhorar a coesão de uma classe com um valor elevado de LCOM.
+
+52. A nomeação de variáveis, métodos e classes é um dos pilares fundamentais do Clean Code. 1.1. Explique por que é importante utilizar nomes que revelem a intenção no código. Dê um exemplo de uma má prática de nomenclatura e como ela pode ser melhorada.   1.2. Como o uso de nomes pronunciáveis e significativos pode impactar a manutenção e a escalabilidade do software?  1.3. Muitas vezes, programadores optam por nomes curtos para variáveis e métodos para economizar tempo. Quais são os problemas potenciais dessa abordagem? Proponha uma estratégia para balancear clareza e concisão.
+53. A organização e a nomeação de classes também são cruciais para manter um código limpo. 1. Considere um sistema de gerenciamento de biblioteca. Como você nomearia classes para representar livros, usuários e empréstimos, seguindo os princípios do Clean Code? Justifique suas escolhas.  2. O que significa dizer que uma classe deve ter um nome que seja "claro ao seu contexto"? Dê um exemplo de um nome de classe que pode ser confuso e proponha uma melhoria.  3. Em que situações você acredita que um nome de classe "grande" pode ser justificado? Quais são os riscos associados a nomes de classe excessivamente longos?
+54. Os métodos devem ser pequenos e focados em uma única responsabilidade.1. Explique a importância do princípio de que "um método deve fazer apenas uma coisa". Como você lidaria com um método que parece realizar múltiplas tarefas?  2. Métodos com muitos parâmetros são desencorajados em Clean Code. Como você refatoraria um método que aceita cinco ou mais parâmetros? Use um exemplo concreto para ilustrar sua resposta.  3. Argumentos booleanos são considerados não elegantes em métodos. Qual seria uma alternativa a essa prática? Dê um exemplo de como um argumento booleano pode ser substituído por uma solução mais clara e flexível.
+55. omentários são necessários, mas devem ser usados com moderação.1. "Um código bem escrito dispensa comentários." Explique essa afirmação no contexto de Clean Code. Quais são as exceções em que comentários são realmente úteis?  2. Dê exemplos de comentários que podem ser substituídos por código mais claro ou refatoração. Como essas mudanças podem melhorar a legibilidade do código?  3. Discuta a importância de manter os comentários atualizados com o código. O que pode acontecer se os comentários se tornarem desatualizados?
+56. O tratamento de exceções é uma área crítica para manter a robustez do código. 1. Por que o uso de exceções específicas é preferido em Clean Code? Como isso ajuda na depuração e manutenção do software?  2. Imagine que você tem um método que pode lançar três tipos diferentes de exceções. Como você organizaria o código para garantir que cada exceção seja tratada adequadamente sem sobrecarregar o fluxo principal?  3. Explique a desvantagem de utilizar códigos de erro em vez de exceções. Quando você consideraria aceitável usar códigos de erro, se é que alguma vez o faria?
+57. A Regra do Escoteiro é um princípio simples, mas poderoso, em Clean Code. 1. Descreva a Regra do Escoteiro e explique como ela pode ser aplicada em um cenário de desenvolvimento contínuo.  2. Dê um exemplo de uma situação em que você aplicou ou aplicaria a Regra do Escoteiro para melhorar a qualidade do código.  3. A Regra do Escoteiro pode levar a mudanças constantes no código. Como você equilibraria a aplicação dessa regra com a necessidade de estabilidade em um projeto de software?
+
+ 
+
 
