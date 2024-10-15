@@ -29,3 +29,34 @@ O desafio está em projetar e desenvolver uma **aplicação modular e eficiente*
 4.  **Aplicar descontos** de forma dinâmica nos pacotes personalizados, simulando uma funcionalidade comum em promoções turísticas.
 
 Este projeto não apenas servirá como uma aplicação prática dos conceitos de POO, mas também proporcionará aos alunos uma **experiência próxima ao desenvolvimento real de software** para a indústria de turismo.
+
+
+### *Saída Esperada*
+
+Pacote: Pacote Europa
+Destinos:
+ - Paris
+ - Londres
+ - Nova York
+
+Preços por Temporada (Baixa, Média, Alta):
+Paris: 5000.0 7000.0 9000.0 
+Londres: 6000.0 8000.0 10000.0 
+Nova York: 7000.0 9000.0 11000.0 
+
+Aplicando 10.0% de desconto na baixa temporada:
+Paris: Preço original: 5000.0 | Preço com desconto: 4500.0
+Londres: Preço original: 6000.0 | Preço com desconto: 5400.0
+Nova York: Preço original: 7000.0 | Preço com desconto: 6300.0
+
+Pacote: Pacote Premium
+Destinos:
+ - Paris
+ - Londres
+ - Nova York
+
+Preços por Temporada (Baixa, Média, Alta):
+Paris: 5000.0 7000.0 9000.0 
+Londres: 6000.0 8000.0 10000.0 
+Nova York: 7000.0 9000.0 11000.0 
+
