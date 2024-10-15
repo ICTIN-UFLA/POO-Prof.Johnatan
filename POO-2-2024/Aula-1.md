@@ -150,12 +150,12 @@ A classe `App` conterá o método `main`, que será o **ponto de entrada** do pr
 #### **Código da Classe App.java:**
 
 ```java
-package cadastro;
-
 import java.util.Scanner;
 
 public class App {
+	
     public static void main(String[] args) {
+    	
         Scanner scanner = new Scanner(System.in);
         Cadastro cadastro = new Cadastro();
 
@@ -166,18 +166,32 @@ public class App {
             System.out.println("2. Listar Pessoas");
             System.out.println("3. Sair");
             System.out.print("Escolha uma opção: ");
+            
             int opcao = scanner.nextInt();
-            scanner.nextLine(); // Consumir a quebra de linha
+            scanner.nextLine(); 
 
             switch (opcao) {
                 case 1:
                     System.out.print("Nome: ");
                     String nome = scanner.nextLine();
+
                     System.out.print("Idade: ");
                     int idade = scanner.nextInt();
+                    
+                    while (idade <= 0) {
+                        System.out.print("A idade está inválida, digite uma idade válida: ");
+                        idade = scanner.nextInt();
+                    }
                     scanner.nextLine(); // Consumir a quebra de linha
+
                     System.out.print("Email: ");
                     String email = scanner.nextLine();
+                    
+                    while (!email.contains("@")) {
+                        System.out.println("Email inválido. Certifique-se de que o email contém '@'.");
+                        System.out.print("Email: ");
+                        email = scanner.nextLine();
+                    }
 
                     Pessoa pessoa = new Pessoa(nome, idade, email);
                     cadastro.adicionarPessoa(pessoa);
