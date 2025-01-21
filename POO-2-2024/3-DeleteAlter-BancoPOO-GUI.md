@@ -36,32 +36,7 @@ CREATE TABLE usuarios (
 
 5. Clique no botão "Execute" para criar o banco de dados e a tabela.
 
-## Passo 2: Criando a Classe de Conexão
 
-Crie uma classe chamada `ConexaoMySQL` para gerenciar a conexão com o banco de dados:
-
-```java
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
-public class ConexaoMySQL {
-    private static final String URL = "jdbc:mysql://localhost:3306/exemplo_db?useSSL=false&serverTimezone=UTC";
-    private static final String USER = "root";
-    private static final String PASSWORD = "sua_senha";
-
-    public static Connection conectar() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection(URL, USER, PASSWORD);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Driver JDBC não encontrado", e);
-        } catch (SQLException e) {
-            throw new RuntimeException("Erro na conexão", e);
-        }
-    }
-}
-```
 
 ## Passo 3: Criando o Projeto no NetBeans
 
@@ -137,6 +112,33 @@ public void listarUsuarios(DefaultTableModel model) {
         }
     } catch (Exception e) {
         e.printStackTrace();
+    }
+}
+```
+
+## Passo 4.3: Criando a Classe de Conexão
+
+Crie uma classe chamada `ConexaoMySQL` para gerenciar a conexão com o banco de dados:
+
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ConexaoMySQL {
+    private static final String URL = "jdbc:mysql://localhost:3306/exemplo_db?useSSL=false&serverTimezone=UTC";
+    private static final String USER = "root";
+    private static final String PASSWORD = "sua_senha";
+
+    public static Connection conectar() {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            return DriverManager.getConnection(URL, USER, PASSWORD);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException("Driver JDBC não encontrado", e);
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro na conexão", e);
+        }
     }
 }
 ```
