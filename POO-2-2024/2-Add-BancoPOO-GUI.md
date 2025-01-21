@@ -1,8 +1,8 @@
 
-# Tutorial: Usando Banco de Dados MySQL no NetBeans com MySQL Workbench
+# Usando Banco de Dados MySQL no NetBeans com MySQL Workbench
 
 ## Introdução
-Este tutorial irá guiá-lo passo a passo na configuração e utilização do banco de dados MySQL no NetBeans, utilizando o MySQL Workbench para gerenciar o banco de dados e criando uma interface gráfica para interagir com ele.
+Esta aula irá guiá-lo passo a passo na configuração e utilização do banco de dados MySQL no NetBeans, utilizando o MySQL Workbench para gerenciar o banco de dados e criando uma interface gráfica para interagir com ele.
 
 ## Pré-requisitos
 Antes de começar, certifique-se de ter:
@@ -158,7 +158,7 @@ public class UsuarioDAO {
 
 ## Conclusão
 
-Neste tutorial, aprendemos a:
+Nesta  aula , aprendemos a:
 
 1. Instalar e configurar o MySQL e o MySQL Workbench.
 2. Configurar as dependências via Maven no NetBeans.
