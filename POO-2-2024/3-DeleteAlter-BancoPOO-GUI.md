@@ -96,25 +96,67 @@ private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {
     usuarioDAO.excluirUsuario(id);
     listarUsuarios();
 }
+
+
 ```
 
 ### 4.3 Implementando a classe `UsuarioDAO`
 
 ```java
-public void listarUsuarios(DefaultTableModel model) {
-    model.setRowCount(0);
-    String sql = "SELECT * FROM usuarios";
-    try (Connection conn = ConexaoMySQL.conectar();
-         PreparedStatement stmt = conn.prepareStatement(sql);
-         ResultSet rs = stmt.executeQuery()) {
-        while (rs.next()) {
-            model.addRow(new Object[]{rs.getInt("id"), rs.getString("nome"), rs.getString("email")});
+import java.sql.*;
+import javax.swing.table.DefaultTableModel;
+
+public class UsuarioDAO {
+    public void inserirUsuario(String nome, String email) {
+        String sql = "INSERT INTO usuarios (nome, email) VALUES (?, ?)";
+        try (Connection conn = ConexaoMySQL.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, nome);
+            stmt.setString(2, email);
+            stmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-    } catch (Exception e) {
-        e.printStackTrace();
     }
-}
-```
+
+    public void atualizarUsuario(int id, String nome, String email) {
+        String sql = "UPDATE usuarios SET nome=?, email=? WHERE id=?";
+        try (Connection conn = ConexaoMySQL.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, nome);
+            stmt.setString(2, email);
+            stmt.setInt(3, id);
+            stmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void excluirUsuario(int id) {
+        String sql = "DELETE FROM usuarios WHERE id=?";
+        try (Connection conn = ConexaoMySQL.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void listarUsuarios(DefaultTableModel model) {
+        model.setRowCount(0);
+        String sql = "SELECT * FROM usuarios";
+        try (Connection conn = ConexaoMySQL.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                model.addRow(new Object[]{rs.getInt("id"), rs.getString("nome"), rs.getString("email")});
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}```
 
 ## Passo 4.3: Criando a Classe de Conexão
 
