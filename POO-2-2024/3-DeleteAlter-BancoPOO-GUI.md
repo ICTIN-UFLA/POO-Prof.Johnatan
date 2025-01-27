@@ -97,6 +97,12 @@ private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {
     listarUsuarios();
 }
 
+private void listarUsuarios() {
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        DefaultTableModel model = (DefaultTableModel) usuariosTable.getModel();
+        usuarioDAO.listarUsuarios(model);
+    }
+
 
 ```
 
