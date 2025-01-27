@@ -156,7 +156,9 @@ public class UsuarioDAO {
             e.printStackTrace();
         }
     }
-}```
+}
+
+```
 
 ## Passo 4.3: Criando a Classe de Conexão
 
