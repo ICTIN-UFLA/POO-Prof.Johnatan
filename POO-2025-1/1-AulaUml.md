@@ -54,8 +54,5 @@ A **Biblioteca Universitária XPTO** precisa de um sistema para gerenciar:
 
 ---
 
-### Dicas  
-- Revise: **Agregação vs. Composição**.  
-- Exemplo de herança:  
-  ```java  
-  class Professor extends Usuario { ... }  
+### Resposta  
+![Diagrama UML](https://github.com/ICTIN-UFLA/POO-Prof.Johnatan/blob/main/img/Primeiro.png)
