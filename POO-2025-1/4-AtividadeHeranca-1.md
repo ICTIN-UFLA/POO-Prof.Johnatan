@@ -25,7 +25,7 @@ A classe **Funcionário** será a superclasse, e as classes **Gerente** e **Oper
     - Sobrescreve o método `calcularSalario()`: O operário recebe um adicional fixo de R$ 500,00 sobre o salário base.
 
 4. **Classe Principal** (`Main`):
-    - Crie uma classe chamada `Main` (ou `Zoologico`, como preferir) que deve conter o método `main`.
+    - Crie uma classe chamada `Main` (ou `Empresa`, como preferir) que deve conter o método `main`.
     - No método `main`, crie instâncias de **Gerente** e **Operário**, inicialize seus dados e mostre o nome e o salário calculado para cada um.
 
 ## 🧑‍💻 Tarefa
