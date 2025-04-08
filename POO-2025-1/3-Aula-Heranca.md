@@ -113,7 +113,7 @@ public class Gato extends Animal {
 public class Zoologico {
     public static void main(String[] args) {
         Animal a1 = new Cachorro("Rex");
-        Animal a2 = new Gato("Mimi");
+        Animal a2 = new Gato("Didi");
 
         a1.mostrarNome();
         a1.fazerSom();
