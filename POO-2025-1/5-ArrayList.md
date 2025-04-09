@@ -186,3 +186,157 @@ Número de estudantes após remoção: 2
 
 ---
 
+
+
+# 📝 Desafio: Sistema de Gerenciamento de Livros
+
+## 🧩 Problema
+
+Você foi contratado para desenvolver um sistema de **gerenciamento de livros** em uma biblioteca. O sistema deve permitir que o usuário adicione, remova, pesquise e liste livros. A solução deve ser feita utilizando **ArrayList**.
+
+## 🧑‍💻 Requisitos:
+
+1. **Classe Livro**:
+    - Atributos: `titulo` (String), `autor` (String), `anoPublicacao` (int).
+    - Métodos:
+        - Construtor para inicializar os atributos.
+        - Um método `toString()` que exibe o livro em formato de string: `"Titulo: [titulo], Autor: [autor], Ano de Publicação: [anoPublicacao]"`.
+
+2. **Classe Biblioteca**:
+    - Atributos: Um **ArrayList** de objetos `Livro` para armazenar os livros.
+    - Métodos:
+        - `adicionarLivro(Livro livro)`: Adiciona um livro ao **ArrayList**.
+        - `removerLivro(String titulo)`: Remove o livro do **ArrayList** pelo título.
+        - `buscarLivro(String titulo)`: Retorna o livro com o título correspondente, ou uma mensagem informando que o livro não foi encontrado.
+        - `listarLivros()`: Exibe todos os livros presentes na biblioteca.
+
+3. **Classe Principal (Main)**:
+    - No método `main`, crie uma instância de **Biblioteca** e realize as seguintes ações:
+        1. Adicionar pelo menos 3 livros na biblioteca.
+        2. Remover um livro.
+        3. Buscar um livro pelo título.
+        4. Listar todos os livros na biblioteca.
+
+## 🧑‍💻 Exemplo de Execução:
+
+1. Adicionar livros:
+    - Livro 1: `"O Senhor dos Anéis", autor: "J.R.R. Tolkien", ano de publicação: 1954`
+    - Livro 2: `"Harry Potter e a Pedra Filosofal", autor: "J.K. Rowling", ano de publicação: 1997`
+    - Livro 3: `"O Hobbit", autor: "J.R.R. Tolkien", ano de publicação: 1937`
+
+2. Remover o livro `"Harry Potter e a Pedra Filosofal"`.
+
+3. Buscar o livro `"O Senhor dos Anéis"`.
+
+4. Listar todos os livros na biblioteca.
+
+## 📝 Exemplo de Saída Esperada:
+
+```
+Livros na biblioteca:
+Titulo: O Senhor dos Anéis, Autor: J.R.R. Tolkien, Ano de Publicação: 1954
+Titulo: Harry Potter e a Pedra Filosofal, Autor: J.K. Rowling, Ano de Publicação: 1997
+Titulo: O Hobbit, Autor: J.R.R. Tolkien, Ano de Publicação: 1937
+
+Livro removido: Harry Potter e a Pedra Filosofal
+
+Livros na biblioteca após remoção:
+Titulo: O Senhor dos Anéis, Autor: J.R.R. Tolkien, Ano de Publicação: 1954
+Titulo: O Hobbit, Autor: J.R.R. Tolkien, Ano de Publicação: 1937
+
+Livro encontrado: Titulo: O Senhor dos Anéis, Autor: J.R.R. Tolkien, Ano de Publicação: 1954
+```
+
+
+# 📝 Exemplo de Menu Interativo em Java
+
+Neste exemplo, vamos criar um **menu interativo** em Java onde o usuário pode escolher entre diferentes opções. O programa exibirá o menu, lerá a escolha do usuário e executará uma ação com base na opção escolhida.
+
+## 📌 Código do Exemplo
+
+```java
+import java.util.Scanner;
+
+public class MenuExemplo {
+    public static void main(String[] args) {
+        // Criando o objeto Scanner para ler entradas do usuário
+        Scanner scanner = new Scanner(System.in);
+        
+        int opcao;
+
+        do {
+            // Exibe o menu
+            System.out.println("====== Menu ======");
+            System.out.println("1. Exibir mensagem");
+            System.out.println("2. Calcular soma");
+            System.out.println("3. Sair");
+            System.out.print("Escolha uma opção: ");
+            
+            // Lê a opção do usuário
+            opcao = scanner.nextInt();
+            
+            // Executa a ação com base na opção escolhida
+            switch (opcao) {
+                case 1:
+                    System.out.println("Você escolheu a opção 1: Exibir mensagem!");
+                    break;
+                case 2:
+                    System.out.print("Digite o primeiro número: ");
+                    int num1 = scanner.nextInt();
+                    System.out.print("Digite o segundo número: ");
+                    int num2 = scanner.nextInt();
+                    int soma = num1 + num2;
+                    System.out.println("A soma é: " + soma);
+                    break;
+                case 3:
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opção inválida! Tente novamente.");
+            }
+            System.out.println(); // Linha em branco para melhor visualização
+        } while (opcao != 3); // O loop continua até o usuário escolher a opção 3 para sair
+        
+        // Fecha o scanner
+        scanner.close();
+    }
+}
+```
+
+## 📘 Explicação do Código
+
+- **Scanner**: Usamos a classe `Scanner` para ler a entrada do usuário via console. O método `nextInt()` é utilizado para ler números inteiros.
+- **do-while**: O menu continua sendo exibido enquanto o usuário não escolher a opção de sair (opção 3).
+- **switch-case**: A estrutura `switch` é usada para tomar decisões baseadas na opção escolhida pelo usuário. Dependendo da escolha, o programa executa diferentes blocos de código.
+- **Menu de opções**: O menu é exibido a cada iteração, e o programa espera a escolha do usuário. Se a escolha for inválida, o programa pede para o usuário tentar novamente.
+
+## ✅ Exemplo de Saída Esperada
+
+```
+====== Menu ======
+1. Exibir mensagem
+2. Calcular soma
+3. Sair
+Escolha uma opção: 1
+Você escolheu a opção 1: Exibir mensagem!
+
+====== Menu ======
+1. Exibir mensagem
+2. Calcular soma
+3. Sair
+Escolha uma opção: 2
+Digite o primeiro número: 5
+Digite o segundo número: 7
+A soma é: 12
+
+====== Menu ======
+1. Exibir mensagem
+2. Calcular soma
+3. Sair
+Escolha uma opção: 3
+Saindo...
+```
+
+---
+
+Este é um exemplo básico de como criar um menu em Java. Ele pode ser expandido para incluir mais opções e funcionalidades conforme necessário.
