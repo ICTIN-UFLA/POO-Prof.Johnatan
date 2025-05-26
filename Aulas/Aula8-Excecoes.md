@@ -142,3 +142,115 @@ O tratamento de exceções é essencial para tornar aplicações mais robustas e
 
 - Documentação oficial Java: https://docs.oracle.com/javase/tutorial/essential/exceptions/
 - Livros de Java POO como “Use a Cabeça! Java” e “Java: Como Programar” dos Deitel.
+
+
+
+# Atividade Prática Resolvida – Tratamento de Exceções em Java
+
+## Objetivo
+Aplicar os conceitos de tratamento de exceções em um cenário prático envolvendo operações bancárias.
+
+---
+
+## Enunciado
+
+Você deve implementar um sistema simples de conta bancária que permita:
+
+- Realizar depósitos e saques.
+- Lançar uma exceção personalizada chamada `SaldoInsuficienteException` quando o valor do saque for maior que o saldo disponível.
+- Utilizar `try-catch` para capturar e tratar exceções.
+- Imprimir mensagens claras ao usuário quando uma exceção for lançada.
+
+---
+
+## Passo a Passo com Código
+
+### 1. Criando a exceção personalizada
+
+```java
+public class SaldoInsuficienteException extends Exception {
+    public SaldoInsuficienteException(String mensagem) {
+        super(mensagem);
+    }
+}
+```
+
+---
+
+### 2. Criando a classe `ContaBancaria`
+
+```java
+public class ContaBancaria {
+    private String titular;
+    private double saldo;
+
+    public ContaBancaria(String titular, double saldoInicial) {
+        this.titular = titular;
+        this.saldo = saldoInicial;
+    }
+
+    public void depositar(double valor) {
+        saldo += valor;
+        System.out.println("Depósito de R$" + valor + " realizado com sucesso.");
+    }
+
+    public void sacar(double valor) throws SaldoInsuficienteException {
+        if (valor > saldo) {
+            throw new SaldoInsuficienteException("Saldo insuficiente para saque de R$" + valor);
+        }
+        saldo -= valor;
+        System.out.println("Saque de R$" + valor + " realizado com sucesso.");
+    }
+
+    public void mostrarSaldo() {
+        System.out.println("Saldo atual: R$" + saldo);
+    }
+}
+```
+
+---
+
+### 3. Criando a classe principal `BancoMain`
+
+```java
+public class BancoMain {
+    public static void main(String[] args) {
+        ContaBancaria conta = new ContaBancaria("João", 500.0);
+
+        conta.mostrarSaldo();
+
+        conta.depositar(200.0);
+        conta.mostrarSaldo();
+
+        try {
+            conta.sacar(800.0); // tentativa de saque maior que o saldo
+        } catch (SaldoInsuficienteException e) {
+            System.out.println("Erro ao sacar: " + e.getMessage());
+        }
+
+        conta.mostrarSaldo();
+    }
+}
+```
+
+---
+
+## Saída Esperada
+
+```
+Saldo atual: R$500.0
+Depósito de R$200.0 realizado com sucesso.
+Saldo atual: R$700.0
+Erro ao sacar: Saldo insuficiente para saque de R$800.0
+Saldo atual: R$700.0
+```
+
+---
+
+## Conclusão
+
+Com essa atividade, aprendemos a:
+- Criar exceções personalizadas.
+- Utilizar blocos `try-catch` para capturar e tratar exceções.
+- Garantir que o programa continue executando mesmo quando erros ocorrem.
+
